@@ -6,11 +6,11 @@
 
 <title>Portals of the Heart — Teachings of the Kulārṇava Tantra</title>
 <meta name="description" content="The sixty teachings of the Kulārṇava Tantra — the Kaula tradition's guide to the inner life of practice, rendered as a book you can read."/>
-<meta name="author" content="Portals of Now"/>
+<meta name="author" content="Portals of the Fire"/>
 <link rel="canonical" href="https://portalsofthefire.vercel.app/"/>
 
 <!-- Theme / browser chrome -->
-<meta name="theme-color" content="#1A0A06"/>
+<meta name="theme-color" content="#241008"/>
 <meta name="color-scheme" content="light dark"/>
 
 <!-- Favicon & app icons -->
@@ -50,7 +50,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Cormorant Garamond
 
 /* ── THEME VARIABLES ─── */
 :root{
-  --desk-1:#1A0A06; --desk-2:#060200;
+  --desk-1:#241008; --desk-2:#0A0401;
   --paper:#F0E8D5; --paper-edge:#C8AA80; --paper-corner:#D8C8A8;
   --ink:#1C1810; --ink-soft:#2A1E10;
   --eyebrow:#8A7448; --gold:#C8920A; --gold-soft:#B08850;
@@ -60,7 +60,7 @@ html,body{width:100%;height:100%;overflow:hidden;font-family:'Cormorant Garamond
   --grain-opacity:0.5; --paper-glow:transparent; --font-scale:1;
 }
 [data-theme="night"]{
-  --desk-1:#1A0A06; --desk-2:#060200;
+  --desk-1:#241008; --desk-2:#0A0401;
   --paper:#EAD9B8; --paper-edge:#A88852; --paper-corner:#C0AA7E;
   --ink:#2A2012; --ink-soft:#3A2C18;
   --eyebrow:#9A8050; --gold:#E0A828; --gold-soft:#B89050;
@@ -550,18 +550,18 @@ body[data-reading="false"] #toolbar{opacity:0.5}
   <!-- COVER -->
   <div class="page" id="cover-page">
     <div class="page-grain"></div><div class="page-foxing"></div>
-    <div class="cover-press">Kulārṇava Tantra · Kaula Tradition</div>
+    <div class="cover-press">Rudra-Yāmala Tantra · Kaula Tradition</div>
     <div class="cover-border">
       <div class="cover-border-line"></div>
       <div class="cover-border-ornament">❧ ✦ ❧</div>
       <div class="cover-border-line thin"></div>
     </div>
-    <h1 class="cover-title">Portals<br>of Now</h1>
+    <h1 class="cover-title">Portals<br>of the Fire</h1>
     <p class="cover-subtitle">Sixty Passages from the Rudra-Yāmala Tantra</p>
     <div class="orn-rule" style="max-width:200px;margin:0 auto 16px">
       <div class="orn-rule-line"></div><span class="orn-rule-glyph">✾</span><div class="orn-rule-line"></div>
     </div>
-    <p class="cover-vbt">Being a rendering of the Kulārṇava Tantra</p>
+    <p class="cover-vbt">Being a rendering of the Rudra-Yāmala Tantra</p>
     <p class="cover-count">Sixty Doorways into the Fire</p>
     <button class="cover-begin" onclick="goForward()">Open the Book</button>
     <button id="continue-reading" style="display:none">
@@ -578,9 +578,10 @@ body[data-reading="false"] #toolbar{opacity:0.5}
     <h2 class="fm-title">A Note Before You Begin</h2>
     <div class="orn-rule"><div class="orn-rule-line"></div><span class="orn-rule-glyph">❧</span><div class="orn-rule-line"></div></div>
     <div class="fm-body">
-      <p class="fm-para">The Vijñāna Bhairava Tantra is one of the oldest contemplative texts in the world — a dialogue between Bhairava and Devi, the absolute and the seeker, composed in Kashmir around the eighth century. In it, Bhairava offers 112 dharanas: not 112 techniques, but 112 doors into the same room. That room is the present moment. Pure awareness. What you already are, when you stop looking for something else.</p>
-      <p class="fm-para">Each page of this book holds one dharana. At the top, the original Sanskrit verse — the door as it was first carved. Below it, a plain-English rendering of what the dharana is actually asking you to do, followed by a practical instruction for ordinary life. At the bottom, a single closing line. That line is not a summary. It is a pointer. It asks you to look in a particular direction.</p>
-      <p class="fm-para">You do not need to read in order. You do not need to read one a day. Open anywhere. The only instruction that matters: when the page is in front of you, be here.</p>
+      <p class="fm-para">The Rudra-Yāmala Tantra is one of the most fierce and beautiful texts in the Tantric canon. Its name means the paired fire — the union of Rudra, the howler, and his Śakti, Rudrāṇī, the fierce power through which he acts. Together they constitute the yaāmala: two that are one, the generative tension that produces the fire of liberation.</p>
+      <p class="fm-para">The text does not soften its teaching. It opens in the cremation ground, with Kali dancing on the still body of Shiva, and it does not flinch from what the cremation ground teaches: that what burns is not what is essential, and what remains when everything burnable has burned is what you actually are.</p>
+      <p class="fm-para">These sixty passages enter the teaching at its most alive points — the fierce Goddess, the inner fire, the alchemical transformation, the practices of the Kaula circle. All of them are pointing at the same thing: the fire that was always burning, prior to every practice, as what you are.</p>
+      <p class="fm-para">Read slowly. Let each passage do what fire does. The burning is not the ending.</p>
     </div>
     <div class="orn-rule" style="margin-top:clamp(8px,1.5vw,14px)"><div class="orn-rule-line"></div><span class="orn-rule-glyph">✦</span><div class="orn-rule-line"></div></div>
     <div class="fm-folio">
@@ -655,8 +656,17 @@ body[data-reading="false"] #toolbar{opacity:0.5}
   </div>
 
   <!-- ABOUT THE TEXT -->
-  <div class="page" id="about-page">
+  <div class="page" <div class="page" id="about-page">
     <div class="page-grain"></div><div class="page-foxing"></div>
+    <div class="fm-eyebrow">About the Text</div>
+    <h2 class="fm-title" style="font-size:clamp(20px,4vw,28px)">About the Text</h2>
+    <div class="orn-rule"><div class="orn-rule-line"></div><span class="orn-rule-glyph">❧</span><div class="orn-rule-line"></div></div>
+    <div class="fm-body">
+      <p class="fm-para">The Rudra-Yāmala is one of the eight root Tantras of the Yāmala class — texts structured as dialogues between paired deities. Where most Tantric texts present the Goddess as receptive and Shiva as the teacher, the Rudra-Yāmala is explicit about their equality: the teaching emerges from their union, their pairing, the generative tension between the still and the moving.</p>
+      <p class="fm-para">The text encompasses the full range of the Tantric path: the outer ritual of the Kaula circle, the inner practice of the five elements, the fierce forms of the Goddess (the ten Mahāvidyās), and the alchemical understanding of transformation through fire. Its home is the cremātion ground — not as morbidity but as radical honesty about what is essential.</p>
+      <p class="fm-para">These sixty passages are a contemporary rendering drawn from the text's core teachings. They follow the fire from its fiercest expression through to its most complete — arriving at the recognition that the fire was never anything other than what you are, burning without fuel, needing nothing to sustain it.</p>
+    </div>
+  </div><div class="page-foxing"></div>
     <div class="fm-eyebrow">An Appendix</div>
     <h2 class="fm-title">About the Text</h2>
     <div class="orn-rule"><div class="orn-rule-line"></div><span class="orn-rule-glyph">❧</span><div class="orn-rule-line"></div></div>
@@ -1208,10 +1218,10 @@ function announcePageChange(key) {
   } else if (key.startsWith('ch-')) {
     const c = CHAPTERS[parseInt(key.slice(3))-1];
     msg = `Chapter ${c.label}. ${c.name}.`;
-  } else if (key==='cover') msg='Cover. Portals of Now.';
+  } else if (key==='cover') msg='Cover. Portals of the Fire.';
   else if (key==='frontmatter') msg='How to Read This Book.';
   else if (key==='contents') msg='Table of Contents.';
-  else if (key==='closing') msg='The end. The room was never locked.';
+  else if (key==='closing') msg='The fire never goes out.';
   else if (key==='about') msg='About the Text.';
   live.textContent = msg;
 }
