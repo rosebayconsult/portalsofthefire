@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+
+<title>Portals of the Heart — Teachings of the Kulārṇava Tantra</title>
+<meta name="description" content="The sixty teachings of the Kulārṇava Tantra — the Kaula tradition's guide to the inner life of practice, rendered as a book you can read."/>
+<meta name="author" content="Portals of Now"/>
+<link rel="canonical" href="https://portalsofthefire.vercel.app/"/>
+
+<!-- Theme / browser chrome -->
+<meta name="theme-color" content="#1A0A06"/>
+<meta name="color-scheme" content="light dark"/>
+
+<!-- Favicon & app icons -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="icon-16.png"/>
+<link rel="apple-touch-icon" href="apple-touch-icon.png"/>
+<link rel="manifest" href="manifest.webmanifest"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Portals"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Portals of Breath"/>
+<meta property="og:title" content="Portals of the Heart — Teachings of the Kulārṇava Tantra"/>
+<meta property="og:description" content="The sixty practices of the Shiva Swarodaya — the yogic science of breath. Sixty doorways into the breath that runs your life."/>
+<meta property="og:image" content="https://portalsofthefire.vercel.app/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:url" content="https://portalsofthefire.vercel.app/"/>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Portals of Breath"/>
+<meta name="twitter:description" content="Sixty practices of the Shiva Swarodaya — the yogic science of breath."/>
+<meta name="twitter:image" content="https://portalsofthefire.vercel.app/og-image.png"/>
+
+<!-- Fonts (preconnected for faster first paint) -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;font-family:'Cormorant Garamond',Georgia,serif;-webkit-font-smoothing:antialiased;user-select:none}
+
+/* ── THEME VARIABLES ─── */
+:root{
+  --desk-1:#1A0A06; --desk-2:#060200;
+  --paper:#F0E8D5; --paper-edge:#C8AA80; --paper-corner:#D8C8A8;
+  --ink:#1C1810; --ink-soft:#2A1E10;
+  --eyebrow:#8A7448; --gold:#C8920A; --gold-soft:#B08850;
+  --rust:#6A3A10; --sanskrit:#3E2808; --verse:#7A6448;
+  --rule:#C0A878; --folio:#9A8258; --ornament:#A08858;
+  --fox-1:rgba(160,110,50,0.07); --fox-2:rgba(140,100,40,0.06);
+  --grain-opacity:0.5; --paper-glow:transparent; --font-scale:1;
+}
+[data-theme="night"]{
+  --desk-1:#1A0A06; --desk-2:#060200;
+  --paper:#EAD9B8; --paper-edge:#A88852; --paper-corner:#C0AA7E;
+  --ink:#2A2012; --ink-soft:#3A2C18;
+  --eyebrow:#9A8050; --gold:#E0A828; --gold-soft:#B89050;
+  --rust:#844A18; --sanskrit:#4A3010; --verse:#6A5030;
+  --rule:#B09858; --folio:#8A7040; --ornament:#A88858;
+  --fox-1:rgba(180,120,50,0.09); --fox-2:rgba(150,105,40,0.08);
+  --grain-opacity:0.35; --paper-glow:rgba(224,168,40,0.05);
+}
+
+
+/* ── HIGH CONTRAST MODE ─── */
+[data-contrast="high"]{
+  --eyebrow:#5A4A28; --verse:#4A3A20; --folio:#6A5230; --ornament:#6A5636; --rule:#8A7048;
+}
+[data-contrast="high"] .page-verse-translation{opacity:1}
+
+/* ── DESK — green baize ─── */
+#desk{width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(ellipse 90% 80% at 50% 45%,var(--desk-1) 0%,var(--desk-2) 100%);
+  position:relative;overflow:hidden;transition:background 0.6s ease}
+#desk::before{content:'';position:absolute;inset:0;
+  background-image:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,0.012) 2px,rgba(255,255,255,0.012) 4px),
+    repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(255,255,255,0.008) 2px,rgba(255,255,255,0.008) 4px);
+  pointer-events:none}
+#desk::after{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 60% at 50% 50%,transparent 40%,rgba(0,0,0,0.55) 100%);
+  pointer-events:none}
+#candlelight{position:absolute;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 55% 50% at 50% 42%,rgba(224,168,60,0.10) 0%,transparent 60%);
+  animation:candle-breathe 7s ease-in-out infinite;mix-blend-mode:screen;opacity:0.75}
+@keyframes candle-breathe{
+  0%,100%{opacity:0.55;transform:scale(1)}
+  30%{opacity:0.8;transform:scale(1.015)}
+  55%{opacity:0.6;transform:scale(0.995)}
+  75%{opacity:0.78;transform:scale(1.01)}
+}
+[data-theme="night"] #candlelight{background:radial-gradient(ellipse 55% 50% at 50% 42%,rgba(232,176,70,0.16) 0%,transparent 62%);opacity:0.9}
+@media(prefers-reduced-motion:reduce){#candlelight{animation:none}}
+
+/* ── BOOK STAGE ─── */
+#book-stage{position:relative;width:min(520px,90vw);height:min(760px,92vh);perspective:2000px;z-index:1}
+
+/* ── PAGE BASE ─── */
+.page{position:absolute;inset:0;background:var(--paper);border-radius:1px 4px 4px 1px;transition:background 0.6s ease;
+  padding:clamp(18px,3vw,28px) clamp(28px,5.5vw,50px) clamp(20px,3.5vw,38px);
+  display:flex;flex-direction:column;
+  box-shadow:-10px 2px 28px rgba(0,0,0,0.5),6px 6px 40px rgba(0,0,0,0.55),0px 12px 50px rgba(0,0,0,0.4),
+    inset 0 1px 0 #C8AA80,inset 0 -1px 0 var(--gold-soft),inset 1px 0 0 #C4A878,inset -1px 0 0 #BEA068,
+    inset 18px 0 24px rgba(0,0,0,0.1)}
+.page-grain{position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;opacity:var(--grain-opacity);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='5' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23p)' opacity='0.07'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply}
+.page-foxing{position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 60px 40px at 8% 12%,var(--fox-1) 0%,transparent 100%),
+    radial-gradient(ellipse 40px 60px at 92% 8%,var(--fox-2) 0%,transparent 100%),
+    radial-gradient(ellipse 50px 30px at 88% 92%,var(--fox-1) 0%,transparent 100%),
+    radial-gradient(ellipse 35px 50px at 5% 88%,var(--fox-2) 0%,transparent 100%),
+    radial-gradient(ellipse 120% 120% at 50% 45%,var(--paper-glow) 0%,transparent 70%)}
+.page::before{content:'';position:absolute;top:0;left:0;width:32px;height:100%;
+  background:linear-gradient(90deg,rgba(0,0,0,0.14) 0%,rgba(0,0,0,0.04) 60%,transparent 100%);
+  border-radius:1px 0 0 1px;pointer-events:none;z-index:1}
+.page::after{content:'';position:absolute;bottom:0;right:0;width:40px;height:40px;
+  background:linear-gradient(225deg,var(--paper-edge) 0%,var(--paper-corner) 35%,var(--paper) 60%);
+  clip-path:polygon(100% 0,100% 100%,0 100%);pointer-events:none;z-index:1;opacity:0.8}
+.page>*:not(.page-grain):not(.page-foxing){position:relative;z-index:2}
+
+/* ── ORNAMENTAL RULE ─── */
+.orn-rule{display:flex;align-items:center;gap:8px;margin:0 0 clamp(10px,2vw,16px);flex-shrink:0}
+.orn-rule-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--rule),transparent)}
+.orn-rule-glyph{font-size:11px;color:var(--ornament);line-height:1}
+
+/* ── COVER ─── */
+#cover-page{z-index:50;justify-content:center;align-items:center;text-align:center}
+.cover-press{font-family:'IM Fell English',Georgia,serif;font-size:9px;letter-spacing:0.35em;text-transform:uppercase;color:var(--ornament);margin-bottom:20px}
+.cover-border{width:100%;max-width:280px;margin:0 auto 24px;text-align:center}
+.cover-border-line{height:1px;background:linear-gradient(90deg,transparent,var(--rule),transparent);margin-bottom:5px}
+.cover-border-line.thin{opacity:0.5;margin-top:5px;margin-bottom:0}
+.cover-border-ornament{font-size:13px;color:var(--ornament);letter-spacing:0.4em}
+.cover-title{font-family:'IM Fell English',Georgia,serif;font-size:clamp(36px,8vw,64px);font-style:italic;color:var(--ink);line-height:1.08;margin-bottom:12px}
+.cover-subtitle{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(10px,1.7vw,12px);font-style:italic;color:var(--verse);letter-spacing:0.15em;margin-bottom:24px;line-height:1.6}
+.cover-vbt{font-family:'IM Fell English',Georgia,serif;font-size:clamp(9px,1.4vw,10.5px);letter-spacing:0.2em;color:var(--ornament);margin-bottom:24px}
+.cover-count{font-family:'Cormorant Garamond',Georgia,serif;font-size:10.5px;letter-spacing:0.25em;color:var(--folio);text-transform:uppercase;margin-bottom:30px}
+.cover-begin{font-family:'IM Fell English',Georgia,serif;font-size:10.5px;letter-spacing:0.25em;text-transform:uppercase;color:var(--rust);border:1px solid var(--rule);padding:10px 28px;cursor:pointer;background:transparent;font-style:italic;transition:background 0.25s,border-color 0.25s}
+.cover-begin:hover{background:rgba(90,58,24,0.07);border-color:var(--verse)}
+
+/* ── FRONT MATTER ─── */
+#frontmatter-page{z-index:48;display:none}
+.fm-eyebrow{font-family:'IM Fell English',Georgia,serif;font-size:8.5px;letter-spacing:0.3em;text-transform:uppercase;color:var(--ornament);margin-bottom:12px;flex-shrink:0}
+.fm-title{font-family:'IM Fell English',Georgia,serif;font-size:clamp(18px,3.5vw,24px);font-style:italic;color:var(--ink);line-height:1.2;margin-bottom:clamp(12px,2vw,20px);flex-shrink:0}
+.fm-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:clamp(10px,1.8vw,16px)}
+.fm-para{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(12.5px,1.9vw,14.5px);color:var(--ink-soft);line-height:1.75;text-align:justify;hyphens:auto;flex:1}
+.fm-folio{display:flex;align-items:center;justify-content:space-between;margin-top:clamp(8px,1.8vw,14px);flex-shrink:0}
+
+/* ── CHAPTER OPENING ─── */
+.chapter-page{z-index:40;display:none;justify-content:center;align-items:center;text-align:center;flex-direction:column}
+.chapter-icon{margin-bottom:20px;opacity:0.85;color:var(--ink-soft)}
+.chapter-roman{font-family:'IM Fell English',Georgia,serif;font-size:11px;letter-spacing:0.35em;color:var(--ornament);margin-bottom:10px}
+.chapter-name{font-family:'IM Fell English',Georgia,serif;font-size:clamp(20px,4vw,28px);font-style:italic;color:var(--ink);line-height:1.2;margin-bottom:16px}
+.chapter-desc{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(12px,1.8vw,14px);font-style:italic;color:var(--verse);line-height:1.7;max-width:340px;margin:0 auto 28px}
+.chapter-begin{font-family:'IM Fell English',Georgia,serif;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--rust);border:1px solid var(--gold-soft);padding:9px 24px;cursor:pointer;background:transparent;font-style:italic;transition:background 0.2s}
+.chapter-begin:hover{background:rgba(90,58,24,0.07)}
+
+/* ── CONTENTS ─── */
+#contents-page{z-index:44;display:none;overflow:hidden}
+.contents-header{text-align:center;margin-bottom:14px;flex-shrink:0}
+.contents-title{font-family:'IM Fell English',Georgia,serif;font-size:20px;font-style:italic;color:var(--ink);margin-bottom:3px}
+.contents-sub{font-family:'Cormorant Garamond',Georgia,serif;font-size:9.5px;letter-spacing:0.25em;text-transform:uppercase;color:var(--ornament)}
+.contents-scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-right:3px}
+.contents-scroll::-webkit-scrollbar{width:2px}
+.contents-scroll::-webkit-scrollbar-thumb{background:var(--rule);border-radius:2px}
+.contents-chapter{margin-bottom:12px}
+.ch-heading{font-family:'IM Fell English',Georgia,serif;font-size:8.5px;letter-spacing:0.3em;text-transform:uppercase;color:var(--folio);padding:6px 0 4px;border-top:1px solid var(--rule);margin-bottom:1px;cursor:pointer}
+.ch-heading:hover{color:var(--rust)}
+.contents-entry{display:flex;align-items:baseline;gap:8px;padding:3px 5px;cursor:pointer;transition:background 0.15s;border-radius:1px}
+.contents-entry:hover{background:rgba(90,58,24,0.06)}
+.contents-entry.current{background:rgba(90,58,24,0.11)}
+.ce-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:9.5px;color:var(--folio);flex-shrink:0;width:20px;text-align:right}
+.ce-title{font-family:'IM Fell English',Georgia,serif;font-size:12px;font-style:italic;color:var(--ink-soft);line-height:1.3}
+.contents-footer{flex-shrink:0;text-align:center;margin-top:8px;font-family:'Cormorant Garamond',Georgia,serif;font-size:9.5px;letter-spacing:0.2em;color:var(--folio);text-transform:uppercase;cursor:pointer}
+.contents-footer:hover{color:var(--rust)}
+
+/* ── DHARANA PAGE ─── */
+.passage-page{z-index:30;display:none;overflow:hidden}
+.page-watermark{position:absolute;top:clamp(12px,2.5vw,24px);right:clamp(14px,3vw,30px);
+  font-family:'IM Fell English',Georgia,serif;font-size:clamp(60px,14vw,110px);font-style:italic;
+  color:rgba(180,150,100,0.07);line-height:1;pointer-events:none;user-select:none;z-index:0}
+.page-glyph{
+  display:inline-flex;
+  align-items:center;
+  color:var(--gold);
+  filter:drop-shadow(0 0 5px rgba(218,160,30,0.8)) drop-shadow(0 0 12px rgba(200,130,10,0.45));
+}
+.page-glyph svg{display:block}
+.page-eyebrow{font-family:'IM Fell English',Georgia,serif;font-size:8.5px;letter-spacing:0.3em;text-transform:uppercase;color:var(--ornament);margin-bottom:12px;flex-shrink:0}
+.page-title{font-family:'IM Fell English',Georgia,serif;font-size:clamp(18px,3.5vw,24px);font-style:italic;color:var(--ink);line-height:1.2;margin-bottom:clamp(12px,2vw,20px);flex-shrink:0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.page-sanskrit-block{flex-shrink:0;padding:clamp(8px,1.6vw,12px) 0;margin-bottom:clamp(8px,1.6vw,12px);text-align:center}
+.page-sanskrit-block .orn-rule{margin-bottom:clamp(6px,1.2vw,10px)}
+.page-sanskrit{font-size:clamp(13px,2.1vw,15.5px);color:var(--sanskrit);line-height:1.85;letter-spacing:0.025em;margin-bottom:6px;white-space:pre-line}
+.page-verse-translation{font-family:'IM Fell English',Georgia,serif;font-size:clamp(9.5px,1.5vw,11px);font-style:italic;color:var(--verse);line-height:1.55}
+.page-body{flex:1;overflow:hidden;display:flex;flex-direction:column;gap:clamp(6px,1.2vw,10px);min-height:0}
+.page-para{font-family:'Cormorant Garamond',Georgia,serif;font-size:calc(clamp(12.5px,1.9vw,14.5px) * var(--font-scale));color:var(--ink);line-height:1.74;text-align:justify;hyphens:auto}
+.first-para::first-letter{font-family:'IM Fell English',Georgia,serif;font-size:3.1em;line-height:0.82;float:left;padding:2px 8px 0 0;color:var(--rust);font-style:italic}
+.page-closing{font-family:'IM Fell English',Georgia,serif;font-size:clamp(12px,1.9vw,14px);font-style:italic;color:var(--rust);line-height:1.58;flex-shrink:0}
+.page-folio{display:flex;align-items:center;justify-content:space-between;margin-top:clamp(8px,1.8vw,16px);flex-shrink:0}
+.folio-btn{background:none;border:none;font-family:'IM Fell English',Georgia,serif;font-size:16px;color:var(--folio);cursor:pointer;padding:3px 5px;transition:color 0.2s;line-height:1;font-style:italic}
+.folio-btn:hover{color:var(--rust)}
+.folio-btn:disabled{opacity:0.18;cursor:default}
+.folio-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:9.5px;letter-spacing:0.2em;color:var(--folio);text-align:center;cursor:pointer;text-transform:uppercase}
+.folio-num:hover{color:var(--rust)}
+
+/* ── CLOSING PAGE ─── */
+#closing-page{z-index:28;display:none;justify-content:center;align-items:center;text-align:center;flex-direction:column}
+.closing-enso{margin-bottom:28px;opacity:0.7}
+.closing-text{font-family:'IM Fell English',Georgia,serif;font-size:clamp(14px,2.5vw,18px);font-style:italic;color:var(--ink-soft);line-height:1.9;margin-bottom:28px;max-width:320px}
+.closing-folio{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:auto}
+
+/* ── PAGE TURNS ─── */
+@keyframes turn-out     {0%{transform:rotateY(0);opacity:1}100%{transform:rotateY(-90deg);opacity:0}}
+@keyframes turn-in      {0%{transform:rotateY(90deg);opacity:0}100%{transform:rotateY(0);opacity:1}}
+@keyframes turn-out-back{0%{transform:rotateY(0);opacity:1}100%{transform:rotateY(90deg);opacity:0}}
+@keyframes turn-in-back {0%{transform:rotateY(-90deg);opacity:0}100%{transform:rotateY(0);opacity:1}}
+.page.turning-out      {animation:turn-out      0.34s cubic-bezier(0.45,0.05,0.55,0.95) forwards;transform-origin:left  center}
+.page.turning-in       {animation:turn-in        0.34s cubic-bezier(0.45,0.05,0.55,0.95) forwards;transform-origin:left  center}
+.page.turning-out-back {animation:turn-out-back  0.34s cubic-bezier(0.45,0.05,0.55,0.95) forwards;transform-origin:right center}
+.page.turning-in-back  {animation:turn-in-back   0.34s cubic-bezier(0.45,0.05,0.55,0.95) forwards;transform-origin:right center}
+
+#touch-hint{position:absolute;bottom:-32px;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',Georgia,serif;font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(160,140,100,0.28);white-space:nowrap;pointer-events:none;font-style:italic}
+
+
+/* ── SCREEN READER ONLY ─── */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ── TOOLBAR ─── */
+#toolbar{position:fixed;top:max(14px,env(safe-area-inset-top));right:16px;z-index:200;display:flex;gap:6px}
+.tool-btn{width:38px;height:38px;border-radius:50%;border:1px solid rgba(200,170,110,0.25);
+  background:rgba(20,26,18,0.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  color:#D8C49A;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s,color 0.2s,border-color 0.2s;padding:0}
+.tool-btn:hover{background:rgba(40,50,36,0.8);color:#F0E0B8;border-color:rgba(200,170,110,0.5)}
+.tool-btn:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* ── SCRIM ─── */
+#scrim{position:fixed;inset:0;background:rgba(8,12,8,0.55);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
+  opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:300}
+#scrim.open{opacity:1;pointer-events:auto}
+
+/* ── PANELS (settings + search) ─── */
+.settings-panel,.search-panel{position:fixed;z-index:310;background:var(--paper);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);transition:transform 0.35s cubic-bezier(0.4,0,0.2,1),opacity 0.35s;
+  color:var(--ink)}
+.settings-panel{top:0;right:0;height:100%;width:min(340px,88vw);transform:translateX(100%);
+  padding:clamp(20px,4vw,32px);display:flex;flex-direction:column}
+.settings-panel.open{transform:translateX(0)}
+.search-panel{top:0;left:50%;transform:translate(-50%,-100%);width:min(560px,94vw);max-height:80vh;
+  border-radius:0 0 6px 6px;padding:clamp(18px,3vw,26px);display:flex;flex-direction:column;opacity:0}
+.search-panel.open{transform:translate(-50%,0);opacity:1}
+.panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-shrink:0}
+.panel-title{font-family:'IM Fell English',Georgia,serif;font-size:20px;font-style:italic;color:var(--ink)}
+.panel-close{width:30px;height:30px;border:none;background:transparent;color:var(--folio);font-size:16px;cursor:pointer;border-radius:50%;transition:background 0.2s}
+.panel-close:hover{background:rgba(90,58,24,0.08);color:var(--rust)}
+.setting-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(160,136,88,0.2)}
+.setting-label{font-family:'Cormorant Garamond',Georgia,serif;font-size:15px;color:var(--ink)}
+.setting-control{display:flex;align-items:center;gap:8px}
+.seg-btn{font-family:'IM Fell English',Georgia,serif;font-size:11px;font-style:italic;color:var(--rust);
+  border:1px solid var(--rule);background:transparent;padding:5px 12px;cursor:pointer;border-radius:2px;transition:background 0.2s;min-width:34px}
+.seg-btn.wide{padding:5px 10px}
+.seg-btn:hover{background:rgba(90,58,24,0.08)}
+.seg-btn:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+.setting-value{font-family:'Cormorant Garamond',Georgia,serif;font-size:12px;color:var(--folio);min-width:42px;text-align:right}
+.panel-note{margin-top:auto;padding-top:20px;font-family:'Cormorant Garamond',Georgia,serif;font-size:11.5px;font-style:italic;color:var(--verse);line-height:1.5}
+
+/* ── SEARCH ─── */
+.search-input{width:100%;font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;color:var(--ink);
+  background:rgba(255,255,255,0.25);border:1px solid var(--rule);border-radius:3px;padding:11px 14px;margin-bottom:14px;flex-shrink:0}
+.search-input:focus{outline:none;border-color:var(--gold);background:rgba(255,255,255,0.4)}
+.search-input::placeholder{color:var(--folio);font-style:italic}
+.search-results{overflow-y:auto;flex:1}
+.search-result{display:flex;align-items:baseline;gap:10px;padding:9px 8px;cursor:pointer;border-radius:2px;transition:background 0.15s}
+.search-result:hover{background:rgba(90,58,24,0.07)}
+.sr-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:11px;color:var(--folio);width:24px;text-align:right;flex-shrink:0}
+.sr-title{font-family:'IM Fell English',Georgia,serif;font-size:14px;font-style:italic;color:var(--ink);flex:1}
+.sr-ch{font-family:'IM Fell English',Georgia,serif;font-size:9px;letter-spacing:0.15em;color:var(--ornament);flex-shrink:0}
+.search-empty{padding:20px 8px;font-family:'IM Fell English',Georgia,serif;font-style:italic;color:var(--verse);text-align:center}
+
+/* ── FOLIO ACTIONS (bookmark, share) ─── */
+.folio-center{display:flex;align-items:center;gap:12px}
+.folio-action{background:none;border:none;color:var(--folio);cursor:pointer;padding:3px;display:flex;align-items:center;transition:color 0.2s,transform 0.15s;border-radius:3px}
+.folio-action:hover{color:var(--rust)}
+.folio-action:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+#bookmark-btn.marked{color:var(--gold)}
+#bookmark-btn.marked svg path{fill:var(--gold)}
+#bookmark-btn.marked{animation:bookmark-pop 0.3s ease}
+@keyframes bookmark-pop{0%{transform:scale(1)}50%{transform:scale(1.25)}100%{transform:scale(1)}}
+
+/* ── CONTENTS BOOKMARK MARKER ─── */
+.contents-entry.bookmarked .ce-num::before{content:'✦ ';color:var(--gold);font-size:8px}
+
+/* ── CONTINUE READING (cover) ─── */
+#continue-reading{margin-top:16px;background:transparent;border:none;cursor:pointer;display:block;width:100%;text-align:center;transition:opacity 0.2s}
+#continue-reading:hover{opacity:0.7}
+.cont-label{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--folio);margin-bottom:2px}
+.cont-title{display:block;font-family:'IM Fell English',Georgia,serif;font-size:13px;font-style:italic;color:var(--rust)}
+
+/* ── TOAST ─── */
+#toast{position:fixed;bottom:32px;left:50%;transform:translate(-50%,20px);z-index:400;
+  background:rgba(20,26,18,0.92);color:#EAD9B8;font-family:'Cormorant Garamond',Georgia,serif;font-size:13px;
+  padding:10px 20px;border-radius:20px;opacity:0;pointer-events:none;transition:opacity 0.3s,transform 0.3s;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);max-width:80vw;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* Hide toolbar on cover for cleaner first impression — shown once reading */
+body[data-reading="false"] #toolbar{opacity:0.5}
+
+/* ── PRACTICE MODE ─── */
+#practice-mode{position:fixed;inset:0;z-index:350;
+  background:radial-gradient(ellipse 70% 70% at 50% 45%,var(--desk-1) 0%,var(--desk-2) 100%);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity 0.6s ease}
+#practice-mode.open{opacity:1;pointer-events:auto}
+.practice-exit{position:absolute;top:max(18px,env(safe-area-inset-top));right:20px;width:44px;height:44px;
+  border:1px solid rgba(200,170,110,0.25);background:transparent;color:#C8B488;font-size:16px;cursor:pointer;border-radius:50%;transition:background 0.2s}
+.practice-exit:hover{background:rgba(200,170,110,0.12)}
+.practice-inner{text-align:center;max-width:440px;padding:24px;display:flex;flex-direction:column;align-items:center}
+.practice-glyph{opacity:0.85;margin-bottom:24px;animation:candle-breathe 7s ease-in-out infinite}
+.practice-title{font-family:'IM Fell English',Georgia,serif;font-size:clamp(22px,5vw,30px);font-style:italic;color:#EAD9B8;margin-bottom:20px;line-height:1.2}
+.practice-closing{font-family:'IM Fell English',Georgia,serif;font-size:clamp(14px,2.4vw,17px);font-style:italic;color:#C8920A;line-height:1.6;margin-bottom:36px;max-width:360px}
+.practice-clock{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(40px,10vw,58px);color:#D8C49A;font-weight:300;letter-spacing:0.05em;margin-bottom:20px;font-variant-numeric:tabular-nums}
+.practice-durations{display:flex;gap:10px;margin-bottom:28px}
+.practice-dur{font-family:'IM Fell English',Georgia,serif;font-size:12px;font-style:italic;color:#B8A478;
+  border:1px solid rgba(200,170,110,0.3);background:transparent;padding:7px 16px;cursor:pointer;border-radius:2px;transition:all 0.2s}
+.practice-dur:hover{border-color:rgba(200,170,110,0.6);color:#D8C49A}
+.practice-dur.active{background:rgba(200,146,10,0.18);border-color:var(--gold);color:#EAD9B8}
+.practice-start{font-family:'IM Fell English',Georgia,serif;font-size:14px;letter-spacing:0.2em;text-transform:uppercase;color:#EAD9B8;min-height:44px;
+  border:1px solid var(--gold);background:rgba(200,146,10,0.1);padding:12px 40px;cursor:pointer;font-style:italic;transition:background 0.25s;margin-bottom:20px}
+.practice-start:hover{background:rgba(200,146,10,0.22)}
+.practice-hint{font-family:'Cormorant Garamond',Georgia,serif;font-size:12px;font-style:italic;color:#9A8A64;opacity:0.7}
+
+/* ── ABOUT LINK + PAGE ─── */
+.closing-about-link{margin-top:24px;font-family:'IM Fell English',Georgia,serif;font-size:11px;font-style:italic;letter-spacing:0.15em;color:var(--folio);background:none;border:none;cursor:pointer;transition:color 0.2s}
+.closing-about-link:hover{color:var(--rust)}
+#about-page{z-index:29;display:none}
+.about-scroll{overflow-y:auto;-webkit-overflow-scrolling:touch}
+.about-scroll::-webkit-scrollbar{width:2px}
+.about-scroll::-webkit-scrollbar-thumb{background:var(--rule);border-radius:2px}
+.about-scroll .fm-para em{font-style:italic;color:var(--rust)}
+
+/* ── SHARE MENU ─── */
+#share-menu{position:fixed;bottom:80px;left:50%;transform:translate(-50%,10px);z-index:360;
+  background:var(--paper);border:1px solid var(--rule);border-radius:6px;box-shadow:0 12px 40px rgba(0,0,0,0.4);
+  padding:6px;display:flex;flex-direction:column;gap:2px;opacity:0;pointer-events:none;transition:opacity 0.2s,transform 0.2s;min-width:180px}
+#share-menu.open{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
+#share-menu button{font-family:'Cormorant Garamond',Georgia,serif;font-size:14px;color:var(--ink);
+  background:transparent;border:none;padding:11px 16px;text-align:left;cursor:pointer;border-radius:3px;transition:background 0.15s}
+#share-menu button:hover{background:rgba(90,58,24,0.08)}
+
+/* ── DOOR OF THE DAY (cover) ─── */
+#door-of-day{margin-top:14px;font-family:'Cormorant Garamond',Georgia,serif;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--folio);cursor:pointer;transition:color 0.2s;background:none;border:none}
+#door-of-day:hover{color:var(--rust)}
+#door-of-day .dod-title{font-family:'IM Fell English',Georgia,serif;font-style:italic;text-transform:none;letter-spacing:0;color:var(--rust);font-size:13px}
+
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE — breakpoints: 900 / 700 / 480 / 360 + landscape
+   ═══════════════════════════════════════════════════════════ */
+
+/* Touch devices: enlarge every tap target to ≥44px (WCAG 2.5.5 / Apple HIG).
+   We keep the visual size but expand the hit area with padding/min-dimensions. */
+@media (pointer: coarse) {
+  .tool-btn{width:44px;height:44px}
+  .panel-close{width:44px;height:44px}
+  .folio-btn{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+  .folio-action{min-width:44px;min-height:44px;justify-content:center}
+  .seg-btn{min-height:44px;padding-top:11px;padding-bottom:11px}
+  .seg-btn.wide{min-width:48px}
+  .practice-dur{min-height:44px}
+  .contents-entry{min-height:40px}
+  .ch-heading{min-height:40px;display:flex;align-items:center}
+  .search-result{min-height:44px}
+  .folio-num{min-height:44px;display:inline-flex;align-items:center}
+  .contents-footer span{display:inline-block;padding:8px 4px}
+}
+
+/* ── TABLET & below (≤900px) ── */
+@media (max-width: 900px) {
+  #book-stage{width:min(560px,92vw);height:min(780px,92vh)}
+  #toolbar{right:12px}
+}
+
+/* ── PHONE LANDSCAPE & narrow (≤700px) ── */
+@media (max-width: 700px) {
+  #book-stage{width:94vw;height:94vh}
+  .page{border-radius:2px}
+  #toolbar{top:max(10px,env(safe-area-inset-top));right:10px;gap:5px}
+}
+@media (max-width: 700px) and (pointer: fine){
+  .tool-btn{width:40px;height:40px}
+}
+
+/* ── PHONE PORTRAIT (≤480px) ── */
+@media (max-width: 480px) {
+  #book-stage{width:100vw;height:100vh}
+  .page{border-radius:0}
+  .page::after{display:none}
+  .page{padding:calc(clamp(16px,3vw,26px) + env(safe-area-inset-top,0px)) clamp(22px,6vw,32px) calc(clamp(16px,3vw,30px) + env(safe-area-inset-bottom,0px))}
+  #touch-hint{bottom:calc(6px + env(safe-area-inset-bottom,0px));font-size:8.5px}
+  .settings-panel{width:100vw;max-width:100vw}
+  .search-panel{width:100vw;top:0;border-radius:0}
+  .search-panel.open{transform:translate(-50%,0)}
+  .cover-title{font-size:clamp(38px,13vw,56px)}
+  .folio-center{gap:6px}
+}
+
+/* ── SMALL PHONE (≤360px) ── */
+@media (max-width: 360px) {
+  .page{padding-left:16px;padding-right:16px}
+  .page-para{font-size:calc(12px * var(--font-scale));line-height:1.66;text-align:left;hyphens:auto}
+  .page-sanskrit{font-size:13px}
+  .cover-title{font-size:clamp(34px,14vw,46px)}
+  .cover-subtitle{font-size:10px}
+  .folio-center{gap:4px}
+  .practice-durations{gap:6px}
+  .practice-dur{padding:7px 12px;font-size:11px}
+}
+@media (max-width:360px) and (pointer:fine){ .tool-btn{width:38px;height:38px} }
+
+/* ── SHORT LANDSCAPE (height ≤ 480px) — the hard case ──
+   Not enough vertical room; tighten everything and let the Sanskrit
+   block shrink so real body text always survives the fit. */
+@media (max-height: 480px) {
+  #book-stage{width:min(720px,96vw);height:96vh}
+  .page{padding:clamp(12px,2vh,20px) clamp(24px,4vw,44px)}
+  .page-eyebrow{margin-bottom:6px}
+  .page-title{margin-bottom:8px;font-size:clamp(17px,4.2vh,22px)}
+  .page-sanskrit-block{padding:6px 0;margin-bottom:6px}
+  .page-sanskrit{font-size:clamp(12px,3vh,14px);line-height:1.6;margin-bottom:3px}
+  .page-verse-translation{font-size:clamp(9px,2vh,10px);line-height:1.4}
+  .page-body{gap:5px}
+  .page-para{line-height:1.6}
+  .page-folio{margin-top:6px}
+  #touch-hint{display:none}
+}
+/* Very short landscape — hide Sanskrit translation to guarantee body text */
+@media (max-height: 380px) {
+  .page-verse-translation{display:none}
+  .page-sanskrit-block .orn-rule:last-child{display:none}
+  .page-sanskrit-block{margin-bottom:4px;padding:4px 0}
+}
+
+@media(prefers-reduced-motion:reduce){.page.turning-out,.page.turning-in,.page.turning-out-back,.page.turning-in-back{animation:none!important}}
+</style>
+</head>
+<body>
+<div id="desk">
+<div id="candlelight"></div>
+
+<!-- Screen reader live region -->
+<div id="sr-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+<!-- Top toolbar -->
+<div id="toolbar" role="toolbar" aria-label="Reading controls">
+  <button class="tool-btn" onclick="openSearch()" aria-label="Search the dharanas" title="Search">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="21" y2="21"/></svg>
+  </button>
+  <button class="tool-btn" onclick="toggleTheme()" aria-label="Toggle day or night reading" title="Day / Night">
+    <svg class="theme-icon-day" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.2" y1="4.2" x2="6" y2="6"/><line x1="18" y1="18" x2="19.8" y2="19.8"/><line x1="4.2" y1="19.8" x2="6" y2="18"/><line x1="18" y1="6" x2="19.8" y2="4.2"/></svg>
+    <svg class="theme-icon-night" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:none"><path d="M20,14.5 A8,8 0 1,1 9.5,4 A6.5,6.5 0 0,0 20,14.5 Z"/></svg>
+  </button>
+  <button class="tool-btn" onclick="openSettings()" aria-label="Reading settings" title="Settings">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/><circle cx="9" cy="7" r="2" fill="var(--paper)"/><circle cx="15" cy="12" r="2" fill="var(--paper)"/><circle cx="8" cy="17" r="2" fill="var(--paper)"/></svg>
+  </button>
+</div>
+
+<!-- Scrim -->
+<div id="scrim" onclick="closeAllOverlays()"></div>
+
+<!-- Settings panel -->
+<div class="settings-panel" id="settings-panel" role="dialog" aria-label="Reading settings">
+  <div class="panel-header">
+    <span class="panel-title">Reading</span>
+    <button class="panel-close" onclick="closeSettings()" aria-label="Close settings">✕</button>
+  </div>
+  <div class="setting-row">
+    <span class="setting-label">Light</span>
+    <div class="setting-control">
+      <button class="seg-btn" onclick="applyTheme('day');persistSettings()">Day</button>
+      <button class="seg-btn" onclick="applyTheme('night');persistSettings()">Night</button>
+      <span class="setting-value" id="set-theme">Day</span>
+    </div>
+  </div>
+  <div class="setting-row">
+    <span class="setting-label">Text size</span>
+    <div class="setting-control">
+      <button class="seg-btn wide" onclick="changeFontSize(-0.05)" aria-label="Smaller text">A−</button>
+      <span class="setting-value" id="set-fontsize">100%</span>
+      <button class="seg-btn wide" onclick="changeFontSize(0.05)" aria-label="Larger text">A+</button>
+    </div>
+  </div>
+  <div class="setting-row">
+    <span class="setting-label">High contrast</span>
+    <div class="setting-control">
+      <button class="seg-btn" onclick="toggleContrast()">Toggle</button>
+      <span class="setting-value" id="set-contrast">Off</span>
+    </div>
+  </div>
+  <div class="setting-row">
+    <span class="setting-label">Page sound</span>
+    <div class="setting-control">
+      <button class="seg-btn" onclick="toggleSound()">Toggle</button>
+      <span class="setting-value" id="set-sound">Off</span>
+    </div>
+  </div>
+  <div class="panel-note">Your place, bookmarks, and preferences are saved on this device only.</div>
+</div>
+
+<!-- Search panel -->
+<div class="search-panel" id="search-panel" role="dialog" aria-label="Search">
+  <div class="panel-header">
+    <span class="panel-title">Find a Doorway</span>
+    <button class="panel-close" onclick="closeSearch()" aria-label="Close search">✕</button>
+  </div>
+  <input type="text" id="search-input" class="search-input" placeholder="a word, a feeling — guru, ritual, heart, ocean…" autocomplete="off" aria-label="Search dharanas"/>
+  <div class="search-results" id="search-results"></div>
+</div>
+
+<!-- Practice mode -->
+<div id="practice-mode" role="dialog" aria-label="Practice mode">
+  <button class="practice-exit" onclick="closePractice()" aria-label="Leave practice">✕</button>
+  <div class="practice-inner">
+    <div class="practice-glyph">
+      <svg viewBox="-80 -80 160 160" width="72" height="72"><path d="M0,-68 C38,-68 68,-38 68,0 C68,38 38,68 0,68 C-38,68 -68,38 -68,0 C-68,-38 -38,-68 -4,-68" fill="none" stroke="var(--gold)" stroke-width="5" stroke-linecap="round" opacity="0.55"/></svg>
+    </div>
+    <h2 class="practice-title" id="practice-title"></h2>
+    <p class="practice-closing" id="practice-closing"></p>
+    <div class="practice-clock" id="practice-clock">5:00</div>
+    <div class="practice-durations">
+      <button class="practice-dur active" data-secs="300" onclick="setPracticeDuration(300)">5 min</button>
+      <button class="practice-dur" data-secs="600" onclick="setPracticeDuration(600)">10 min</button>
+      <button class="practice-dur" data-secs="1200" onclick="setPracticeDuration(1200)">20 min</button>
+    </div>
+    <button class="practice-start" id="practice-start" onclick="startPracticeTimer()">Begin</button>
+    <p class="practice-hint">A bell will sound at the start and the end.</p>
+  </div>
+</div>
+
+<div id="book-stage">
+
+  <!-- COVER -->
+  <div class="page" id="cover-page">
+    <div class="page-grain"></div><div class="page-foxing"></div>
+    <div class="cover-press">Kulārṇava Tantra · Kaula Tradition</div>
+    <div class="cover-border">
+      <div class="cover-border-line"></div>
+      <div class="cover-border-ornament">❧ ✦ ❧</div>
+      <div class="cover-border-line thin"></div>
+    </div>
+    <h1 class="cover-title">Portals<br>of Now</h1>
+    <p class="cover-subtitle">Sixty Passages from the Rudra-Yāmala Tantra</p>
+    <div class="orn-rule" style="max-width:200px;margin:0 auto 16px">
+      <div class="orn-rule-line"></div><span class="orn-rule-glyph">✾</span><div class="orn-rule-line"></div>
+    </div>
+    <p class="cover-vbt">Being a rendering of the Kulārṇava Tantra</p>
+    <p class="cover-count">Sixty Doorways into the Fire</p>
+    <button class="cover-begin" onclick="goForward()">Open the Book</button>
+    <button id="continue-reading" style="display:none">
+      <span class="cont-label">Continue reading</span>
+      <span class="cont-title"></span>
+    </button>
+    <button id="door-of-day">Today's door · <span class="dod-title"></span></button>
+  </div>
+
+  <!-- FRONT MATTER -->
+  <div class="page" id="frontmatter-page">
+    <div class="page-grain"></div><div class="page-foxing"></div>
+    <div class="fm-eyebrow">A Note Before You Begin</div>
+    <h2 class="fm-title">A Note Before You Begin</h2>
+    <div class="orn-rule"><div class="orn-rule-line"></div><span class="orn-rule-glyph">❧</span><div class="orn-rule-line"></div></div>
+    <div class="fm-body">
+      <p class="fm-para">The Vijñāna Bhairava Tantra is one of the oldest contemplative texts in the world — a dialogue between Bhairava and Devi, the absolute and the seeker, composed in Kashmir around the eighth century. In it, Bhairava offers 112 dharanas: not 112 techniques, but 112 doors into the same room. That room is the present moment. Pure awareness. What you already are, when you stop looking for something else.</p>
+      <p class="fm-para">Each page of this book holds one dharana. At the top, the original Sanskrit verse — the door as it was first carved. Below it, a plain-English rendering of what the dharana is actually asking you to do, followed by a practical instruction for ordinary life. At the bottom, a single closing line. That line is not a summary. It is a pointer. It asks you to look in a particular direction.</p>
+      <p class="fm-para">You do not need to read in order. You do not need to read one a day. Open anywhere. The only instruction that matters: when the page is in front of you, be here.</p>
+    </div>
+    <div class="orn-rule" style="margin-top:clamp(8px,1.5vw,14px)"><div class="orn-rule-line"></div><span class="orn-rule-glyph">✦</span><div class="orn-rule-line"></div></div>
+    <div class="fm-folio">
+      <button class="folio-btn" onclick="goBack()">←</button>
+      <span class="folio-num" onclick="openContents()">Contents</span>
+      <button class="folio-btn" onclick="goForward()">→</button>
+    </div>
+  </div>
+
+  <!-- CHAPTER PAGES (generated) -->
+
+  <!-- CONTENTS -->
+  <div class="page" id="contents-page">
+    <div class="page-grain"></div><div class="page-foxing"></div>
+    <div class="contents-header">
+      <h2 class="contents-title">Contents</h2>
+      <p class="contents-sub">One Hundred and Twelve Dharanas</p>
+      <div class="orn-rule" style="margin-top:8px"><div class="orn-rule-line"></div><span class="orn-rule-glyph">❧</span><div class="orn-rule-line"></div></div>
+    </div>
+    <div class="contents-scroll" id="contents-scroll"></div>
+    <div class="contents-footer"><span onclick="showCover()">← Cover</span><span style="margin:0 10px;opacity:0.4">·</span><span onclick="openAbout()">About the text</span></div>
+  </div>
+
+  <!-- DHARANA PAGE (reused) -->
+  <div class="page passage-page" id="passage-page">
+    <div class="page-grain"></div><div class="page-foxing"></div>
+    <div class="page-watermark" id="pg-watermark"></div>
+    <div class="page-eyebrow" id="pg-eyebrow"></div>
+    <h2 class="page-title">
+      <span id="pg-title"></span>
+      <div class="page-glyph" id="pg-glyph"></div>
+    </h2>
+    <div class="page-body" id="pg-body"></div>
+    <div class="page-folio">
+      <button class="folio-btn" id="btn-prev" onclick="goBack()" aria-label="Previous page">←</button>
+      <div class="folio-center">
+        <button class="folio-action" id="bookmark-btn" onclick="toggleBookmark(currentPassageNum)" aria-label="Add bookmark" title="Bookmark">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6,3 L18,3 L18,21 L12,16 L6,21 Z"/></svg>
+        </button>
+        <button class="folio-action" onclick="openPractice(currentPassageNum)" aria-label="Sit with this dharana" title="Sit with this">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="7" r="3"/><path d="M5,20 C5,15 8,13 12,13 C16,13 19,15 19,20"/></svg>
+        </button>
+        <span class="folio-num" onclick="openContents()" id="folio-num"></span>
+        <button class="folio-action" id="share-btn" onclick="event.stopPropagation();openShareMenu(currentPassageNum)" aria-label="Share this dharana" title="Share">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><line x1="8.2" y1="10.8" x2="15.8" y2="6.2"/><line x1="8.2" y1="13.2" x2="15.8" y2="17.8"/></svg>
+        </button>
+      </div>
+      <button class="folio-btn" id="btn-next" onclick="goForward()" aria-label="Next page">→</button>
+    </div>
+  </div>
+
+  <!-- CLOSING PAGE -->
+  <div class="page" id="closing-page">
+    <div class="page-grain"></div><div class="page-foxing"></div>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
+      <div class="closing-enso">
+        <svg viewBox="-80 -80 160 160" width="100" height="100">
+          <path d="M0,-68 C38,-68 68,-38 68,0 C68,38 38,68 0,68 C-38,68 -68,38 -68,0 C-68,-38 -38,-68 -4,-68"
+            fill="none" stroke="var(--ink-soft)" stroke-width="6" stroke-linecap="round" opacity="0.65"/>
+        </svg>
+      </div>
+      <div class="orn-rule" style="max-width:200px;margin:0 auto 20px"><div class="orn-rule-line"></div><span class="orn-rule-glyph">✾</span><div class="orn-rule-line"></div></div>
+      <p class="closing-text">The 112 dharanas of the Vijñāna Bhairava Tantra —<br>all of them doors into the same room.<br>The room was never locked.</p>
+      <div class="orn-rule" style="max-width:200px;margin:0 auto 20px"><div class="orn-rule-line"></div><span class="orn-rule-glyph">❧</span><div class="orn-rule-line"></div></div>
+      <button class="closing-about-link" onclick="openAbout()">About this text →</button>
+    </div>
+    <div class="page-folio">
+      <button class="folio-btn" onclick="goBack()">←</button>
+      <span class="folio-num" onclick="openContents()">Contents</span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- ABOUT THE TEXT -->
+  <div class="page" id="about-page">
+    <div class="page-grain"></div><div class="page-foxing"></div>
+    <div class="fm-eyebrow">An Appendix</div>
+    <h2 class="fm-title">About the Text</h2>
+    <div class="orn-rule"><div class="orn-rule-line"></div><span class="orn-rule-glyph">❧</span><div class="orn-rule-line"></div></div>
+    <div class="fm-body about-scroll">
+      <p class="fm-para">The <em>Kulārṇava Tantra</em> is among the most celebrated texts of the Kaula tradition — the Śaiva-Śākta path that places the body, the senses, and ordinary life at the center of the practice rather than asking for their renunciation. It takes the form of a dialogue between Shiva and Parvati — the absolute and its own questioning energy — in which Shiva teaches the science of the swara: the breath as it moves through the left nostril (Ida), the right nostril (Pingala), and the central channel (Sushumna). The text belongs to the Agama tradition, in which Shiva speaks and Parvati asks.</p>
+      <p class="fm-para">The text's title means the ocean of the Kula — where kula refers both to the lineage and to the ocean of consciousness that is the ground of all experience. Its teaching is that liberation is not elsewhere: not in a special state, not after years of preparation, not for a different kind of person. It is available in this life, in this body, in this moment, to whoever is genuinely willing to look.</p>
+      <p class="fm-para">This edition presents sixty teachings drawn from the Kulārṇava Tantra and its tradition, organized into six movements: the preciousness of this birth, the nature of the teacher, the distinction between letter and spirit, the sacred in ordinary life, the intoxication of genuine practice, and the dissolution into the shoreless sea of consciousness. The renderings and closing lines are written fresh for the contemporary reader — interpretations offered in service of the teaching, not scholarly translations. For the Sanskrit and its textual history, seek the primary sources.</p>
+      <p class="fm-para">However you came to this book — come with your actual question, not the question you think you should have. The Kulārṇava is addressed to someone who is genuinely asking, genuinely willing to be changed. If you are that person, the teaching will find you on every page.</p>
+    </div>
+    <div class="orn-rule" style="margin-top:clamp(8px,1.5vw,14px)"><div class="orn-rule-line"></div><span class="orn-rule-glyph">✦</span><div class="orn-rule-line"></div></div>
+    <div class="fm-folio">
+      <button class="folio-btn" onclick="closeAbout()">←</button>
+      <span class="folio-num" onclick="openContents()">Contents</span>
+      <span style="width:32px"></span>
+    </div>
+  </div>
+
+  <div id="touch-hint">swipe to turn · esc for contents</div>
+</div>
+</div>
+
+<script src="passages_data.js" defer></script>
+<script src="verses_data.js" defer></script>
+<script src="glyphs.js" defer></script>
+<script src="chapter_icons.js" defer></script>
+<script>
+
+const CHAPTERS = [
+  {num:1,label:'I',  name:'The Fierce One',         start:1,  end:10, desc:'Who is Rudra — the howler, the roarer, the teaching that costs everything.'},
+  {num:2,label:'II', name:'The Teaching of Fire',   start:11, end:22, desc:'Agni, the three fires, the inner sacrifice, the fire is love.'},
+  {num:3,label:'III',name:'Transformation',         start:23, end:34, desc:'Alchemical fire, Kali, the ten Mahavidyas, what cannot be burned.'},
+  {num:4,label:'IV', name:'The Practices of Fire',  start:35, end:46, desc:'The fierce practice, Kaula, shaktipata, the guru as fire.'},
+  {num:5,label:'V',  name:'The Union',              start:47, end:54, desc:'The sacred couple, the inner yamala, what the fire was for.'},
+  {num:6,label:'VI', name:'The Fire Remains',       start:55, end:60, desc:'The living flame, fierce love, the fire in all traditions.'},
+];
+
+// ── PAGE SEQUENCE ─────────────────────────────────────────
+// Pages: 'cover' | 'frontmatter' | 'ch-1'..'ch-6' | 'dharana-N' | 'closing' | 'contents'
+// We track a linear sequence for forward/back navigation
+
+function buildSequence() {
+  const seq = ['cover','frontmatter'];
+  CHAPTERS.forEach((ch,i) => {
+    seq.push('ch-'+(i+1));
+    for (let n=ch.start; n<=ch.end; n++) seq.push('passage-'+n);
+  });
+  seq.push('closing');
+  return seq;
+}
+const SEQUENCE = buildSequence();
+
+let currentPage = 'cover';
+let animating   = false;
+let currentPassageNum = 1;
+
+// ── PAPER SOUND (Web Audio, generated — no files) ─────────
+let audioCtx = null;
+function ensureAudio() {
+  if (!audioCtx) {
+    try { audioCtx = new (window.AudioContext||window.webkitAudioContext)(); } catch(e){ return null; }
+  }
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+  return audioCtx;
+}
+function playPageSound() {
+  if (!settings.sound) return;
+  const ctx = ensureAudio();
+  if (!ctx) return;
+  // Filtered noise burst = paper rustle
+  const dur = 0.28;
+  const buffer = ctx.createBuffer(1, ctx.sampleRate*dur, ctx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i=0;i<data.length;i++){
+    const t = i/data.length;
+    // envelope: quick attack, soft decay
+    const env = Math.pow(1-t, 2.2) * Math.min(1, t*12);
+    data[i] = (Math.random()*2-1) * env * 0.35;
+  }
+  const src = ctx.createBufferSource();
+  src.buffer = buffer;
+  const hp = ctx.createBiquadFilter();
+  hp.type='highpass'; hp.frequency.value=1400;
+  const lp = ctx.createBiquadFilter();
+  lp.type='lowpass'; lp.frequency.value=7000;
+  const gain = ctx.createGain();
+  gain.gain.value = 0.5;
+  src.connect(hp); hp.connect(lp); lp.connect(gain); gain.connect(ctx.destination);
+  src.start();
+}
+function playBell() {
+  const ctx = ensureAudio();
+  if (!ctx) return;
+  const now = ctx.currentTime;
+  // Two partials for a soft singing-bowl tone
+  [ [432,0.5], [648,0.25] ].forEach(([freq,amp])=>{
+    const osc = ctx.createOscillator();
+    osc.type='sine'; osc.frequency.value=freq;
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0, now);
+    g.gain.linearRampToValueAtTime(amp, now+0.04);
+    g.gain.exponentialRampToValueAtTime(0.0001, now+3.2);
+    osc.connect(g); g.connect(ctx.destination);
+    osc.start(now); osc.stop(now+3.3);
+  });
+}
+
+// ── SHARE ─────────────────────────────────────────────────
+async function shareDharana(n) {
+  const d = PASSAGES[n-1];
+  const url = location.origin + location.pathname + '#/passage/' + n;
+  const shareData = {
+    title: `Portals of the Fire — ${d.title}`,
+    text: `"${d.closing}" — Dharana ${n}, ${d.title}`,
+    url
+  };
+  try {
+    if (navigator.share) { await navigator.share(shareData); return; }
+  } catch(e){ if (e.name==='AbortError') return; }
+  try {
+    await navigator.clipboard.writeText(url);
+    showToast('Link copied');
+  } catch(e){
+    showToast(url);
+  }
+}
+
+// Generate a shareable image card for a dharana (1080×1080)
+function makeDharanaCard(n) {
+  const d = PASSAGES[n-1];
+  const S = 1080;
+  const cv = document.createElement('canvas');
+  cv.width = S; cv.height = S;
+  const x = cv.getContext('2d');
+  const night = settings.theme === 'night';
+
+  // Desk background
+  const g = x.createRadialGradient(S/2,S/2,80, S/2,S/2,S*0.75);
+  g.addColorStop(0, night?'#141a16':'#1E2E1A');
+  g.addColorStop(1, night?'#070b08':'#0C150A');
+  x.fillStyle = g; x.fillRect(0,0,S,S);
+
+  // Paper card
+  const pad = 120, pw = S-pad*2;
+  x.save();
+  x.shadowColor='rgba(0,0,0,0.5)'; x.shadowBlur=50; x.shadowOffsetY=20;
+  x.fillStyle = night?'#EAD9B8':'#F0E8D5';
+  roundRect(x, pad, pad, pw, pw, 6); x.fill();
+  x.restore();
+
+  const cx = S/2;
+  // Eyebrow (chapter)
+  const ch = CHAPTERS.find(c=>n>=c.start&&n<=c.end);
+  x.fillStyle = '#A08858';
+  x.font = 'italic 26px Georgia'; x.textAlign='center';
+  x.fillText((ch?ch.label+' · '+ch.name:'').toUpperCase(), cx, pad+120);
+
+  // Title
+  x.fillStyle = night?'#2A2012':'#1C1810';
+  x.font = 'italic 66px Georgia';
+  wrapText(x, d.title, cx, pad+220, pw-160, 74);
+
+  // Ensō
+  x.strokeStyle = '#C8920A'; x.lineWidth=8; x.lineCap='round';
+  x.beginPath();
+  x.arc(cx, S/2+20, 90, Math.PI*0.15, Math.PI*1.95);
+  x.stroke();
+
+  // Closing line
+  x.fillStyle = night?'#844A18':'#6A3A10';
+  x.font = 'italic 40px Georgia';
+  wrapText(x, d.closing, cx, S/2+200, pw-180, 52);
+
+  // Footer
+  x.fillStyle='#B09878'; x.font='24px Georgia';
+  x.fillText('PORTALS OF NOW · '+n+' OF 112', cx, pad+pw-70);
+
+  return cv;
+}
+function roundRect(x,rx,ry,w,h,r){
+  x.beginPath();
+  x.moveTo(rx+r,ry); x.arcTo(rx+w,ry,rx+w,ry+h,r);
+  x.arcTo(rx+w,ry+h,rx,ry+h,r); x.arcTo(rx,ry+h,rx,ry,r);
+  x.arcTo(rx,ry,rx+w,ry,r); x.closePath();
+}
+function wrapText(x, text, cx, y, maxW, lh){
+  const words = text.split(' '); let line=''; const lines=[];
+  words.forEach(w=>{
+    const test = line?line+' '+w:w;
+    if (x.measureText(test).width > maxW && line) { lines.push(line); line=w; }
+    else line=test;
+  });
+  if (line) lines.push(line);
+  lines.forEach((l,i)=> x.fillText(l, cx, y + i*lh));
+  return lines.length*lh;
+}
+// Generate + share/download the image card
+async function shareDharanaCard(n) {
+  n = n || currentPassageNum;
+  const cv = makeDharanaCard(n);
+  cv.toBlob(async blob => {
+    const file = new File([blob], `portals-dharana-${n}.png`, {type:'image/png'});
+    const url = location.origin + location.pathname + '#/passage/' + n;
+    try {
+      if (navigator.canShare && navigator.canShare({files:[file]})) {
+        await navigator.share({ files:[file], title:`Portals of Now — ${PASSAGES[n-1].title}`, url });
+        return;
+      }
+    } catch(e){ if (e.name==='AbortError') return; }
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `portals-dharana-${n}.png`;
+    a.click();
+    URL.revokeObjectURL(a.href);
+    showToast('Image saved');
+  }, 'image/png');
+}
+
+// Share button opens a small menu: link or image
+function openShareMenu(n) {
+  n = n || currentPassageNum;
+  let menu = document.getElementById('share-menu');
+  if (!menu) {
+    menu = document.createElement('div');
+    menu.id = 'share-menu';
+    menu.innerHTML = `
+      <button onclick="shareDharana(shareMenuNum);closeShareMenu()">Copy link</button>
+      <button onclick="shareDharanaCard(shareMenuNum);closeShareMenu()">Share as image</button>`;
+    document.getElementById('desk').appendChild(menu);
+  }
+  shareMenuNum = n;
+  menu.classList.add('open');
+  setTimeout(()=>document.addEventListener('click', closeShareMenuOnce, {once:true}), 50);
+}
+let shareMenuNum = 1;
+function closeShareMenu(){ const m=document.getElementById('share-menu'); if(m)m.classList.remove('open'); }
+function closeShareMenuOnce(){ closeShareMenu(); }
+let toastTimer=null;
+function showToast(msg) {
+  let t = document.getElementById('toast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = 'toast';
+    document.getElementById('desk').appendChild(t);
+  }
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove('show'), 2200);
+}
+
+// ── DOM REFS ──────────────────────────────────────────────
+const coverEl     = document.getElementById('cover-page');
+const fmEl        = document.getElementById('frontmatter-page');
+const contentsEl  = document.getElementById('contents-page');
+const passageEl   = document.getElementById('passage-page');
+const closingEl   = document.getElementById('closing-page');
+const aboutEl     = document.getElementById('about-page');
+const chapterEls  = {};
+
+// ── BUILD CHAPTER PAGES ───────────────────────────────────
+function buildChapterPages() {
+  CHAPTERS.forEach((ch,i) => {
+    const n   = i+1;
+    const div = document.createElement('div');
+    div.className  = 'page chapter-page';
+    div.id         = 'ch-page-'+(i+1);
+    div.innerHTML  = `
+      <div class="page-grain"></div><div class="page-foxing"></div>
+      <div class="chapter-icon">${CHAPTER_ICONS[n]||''}</div>
+      <div class="chapter-roman">${ch.label}</div>
+      <h2 class="chapter-name">${ch.name}</h2>
+      <p class="chapter-desc">${ch.desc}</p>
+      <div class="page-folio" style="width:100%;margin-top:auto">
+        <button class="folio-btn" onclick="goBack()">←</button>
+        <button class="chapter-begin" onclick="goForward()">Enter →</button>
+        <span style="width:32px"></span>
+      </div>
+    `;
+    document.getElementById('book-stage').insertBefore(div, document.getElementById('passage-page'));
+    chapterEls['ch-'+(i+1)] = div;
+  });
+}
+
+// ── GET ELEMENT FOR PAGE KEY ──────────────────────────────
+function elFor(key) {
+  if (key==='cover')       return coverEl;
+  if (key==='frontmatter') return fmEl;
+  if (key==='contents')    return contentsEl;
+  if (key==='closing')     return closingEl;
+  if (key==='about')       return aboutEl;
+  if (key.startsWith('ch-')) return chapterEls[key];
+  if (key.startsWith('passage-')) return passageEl;
+  return coverEl;
+}
+
+// ── RENDER DHARANA ────────────────────────────────────────
+function renderPassage(n) {
+  const d  = PASSAGES[n-1];
+  const v  = (typeof VERSES!=='undefined') ? VERSES[n-1] : null;
+  const ch = CHAPTERS.find(c=>n>=c.start&&n<=c.end)||CHAPTERS[0];
+
+  currentPassageNum = n;
+  document.getElementById('pg-watermark').textContent = n;
+  document.getElementById('pg-eyebrow').textContent   = ch.label+' · '+ch.name;
+  document.getElementById('pg-title').textContent     = d.title;
+  document.getElementById('folio-num').textContent    = n+' of 60';
+  updateBookmarkButton(n);
+  // Back always valid from a dharana (goes to prev dharana or chapter page).
+  // Forward always valid too (next dharana, chapter, or closing page).
+  document.getElementById('btn-prev').disabled        = false;
+  document.getElementById('btn-next').disabled        = false;
+
+  // Glyph — unique per dharana
+  const glyphSVG = (typeof GLYPHS!=='undefined') ? (GLYPHS[n]||'') : '';
+  document.getElementById('pg-glyph').innerHTML =
+    `<svg viewBox="-24 -24 48 48" width="32" height="32" style="color:var(--gold);flex-shrink:0">${glyphSVG}</svg>`;
+
+  // Body — Sanskrit block first, then all paragraphs, then closing rule + line
+  const body = document.getElementById('pg-body');
+  body.innerHTML = '';
+
+  // Sanskrit verse block
+  if (v && v.sanskrit) {
+    const block = document.createElement('div');
+    block.className = 'page-sanskrit-block';
+    block.innerHTML = `<div class="orn-rule"><div class="orn-rule-line"></div><span class="orn-rule-glyph">❧</span><div class="orn-rule-line"></div></div>`;
+    const sk = document.createElement('p');
+    sk.className = 'page-sanskrit';
+    sk.textContent = v.sanskrit.replace(/<br\s*\/?>/gi,'\n');
+    block.appendChild(sk);
+    if (v.translation) {
+      const tr = document.createElement('p');
+      tr.className='page-verse-translation';
+      tr.textContent=v.translation;
+      block.appendChild(tr);
+    }
+    const r2=document.createElement('div');
+    r2.className='orn-rule';r2.style.marginTop='8px';r2.style.marginBottom='0';
+    r2.innerHTML=`<div class="orn-rule-line"></div><span class="orn-rule-glyph">❧</span><div class="orn-rule-line"></div>`;
+    block.appendChild(r2);
+    body.appendChild(block);
+  }
+
+  // Paragraphs — first one gets a drop cap
+  d.paragraphs.forEach((p, i) => {
+    const el = document.createElement('p');
+    el.className = i===0 ? 'page-para first-para' : 'page-para';
+    el.textContent = p;
+    body.appendChild(el);
+  });
+
+  // Closing rule + closing line — rebuilt each render (body.innerHTML wiped them)
+  const closeRule = document.createElement('div');
+  closeRule.className = 'orn-rule';
+  closeRule.style.marginTop = 'auto';
+  closeRule.style.flexShrink = '0';
+  closeRule.innerHTML = `<div class="orn-rule-line"></div><span class="orn-rule-glyph">✦</span><div class="orn-rule-line"></div>`;
+  body.appendChild(closeRule);
+
+  const closeLine = document.createElement('p');
+  closeLine.className = 'page-closing';
+  closeLine.id = 'pg-closing';
+  closeLine.textContent = d.closing;
+  body.appendChild(closeLine);
+
+  document.querySelectorAll('.contents-entry').forEach(el=>{
+    el.classList.toggle('current',parseInt(el.dataset.num)===n);
+  });
+}
+
+// ── TRIM TEXT TO FIT PAGE ────────────────────────────────
+function trimToFit() {
+  const page = document.getElementById('passage-page');
+  if (!page || page.offsetHeight === 0) return;
+  const body = document.getElementById('pg-body');
+
+  function splitSentences(text) {
+    const parts = [];
+    let i = 0, start = 0;
+    while (i < text.length) {
+      if ('.!?'.includes(text[i])) {
+        let j = i + 1;
+        // Skip closing quotes after punctuation
+        while (j < text.length && (text[j] === '"' || text[j] === "'" || text[j] === '”' || text[j] === '’')) j++;
+        // Skip spaces
+        while (j < text.length && text[j] === ' ') j++;
+        if (j >= text.length || text[j] === text[j].toUpperCase()) {
+          parts.push(text.slice(start, j).trimEnd());
+          start = j; i = j; continue;
+        }
+      }
+      i++;
+    }
+    if (start < text.length) parts.push(text.slice(start).trimEnd());
+    return parts.filter(s => s.length > 0);
+  }
+
+  // overflow:hidden makes scrollHeight === clientHeight always — temporarily lift it
+  page.style.overflow = 'visible';
+  body.style.overflow = 'visible';
+
+  let safety = 80;
+  while (page.scrollHeight > page.clientHeight + 2 && safety-- > 0) {
+    const paras = Array.from(body.querySelectorAll('.page-para'));
+    if (!paras.length) break;
+
+    const last = paras[paras.length - 1];
+    const text = last.textContent.trim();
+    const sentences = splitSentences(text);
+
+    if (sentences.length > 1) {
+      last.textContent = sentences.slice(0, -1).join(' ');
+    } else {
+      body.removeChild(last);
+    }
+  }
+
+  page.style.overflow = '';
+  body.style.overflow = '';
+}
+
+// ── TRANSITION ────────────────────────────────────────────
+function transition(outEl, inEl, forward, cb) {
+  if (animating) return;
+  animating = true;
+  playPageSound();
+
+  // Same physical element (dharana → dharana): swap content at opacity-zero midpoint
+  if (outEl === inEl) {
+    outEl.style.transition = 'opacity 0.18s ease';
+    outEl.style.opacity = '0';
+    setTimeout(() => {
+      // Content swaps here, while invisible
+      if (cb) cb();
+      outEl.style.opacity = '1';
+      setTimeout(() => {
+        outEl.style.transition = '';
+        animating = false;
+      }, 180);
+    }, 180);
+    return;
+  }
+
+  outEl.style.zIndex='35'; inEl.style.zIndex='30';
+  inEl.style.display='flex';
+  const oc=forward?'turning-out':'turning-out-back';
+  const ic=forward?'turning-in':'turning-in-back';
+  outEl.classList.add(oc);
+  setTimeout(()=>{
+    outEl.style.display='none';outEl.classList.remove(oc);outEl.style.zIndex='';
+    inEl.classList.add(ic);inEl.style.zIndex='40';
+    setTimeout(()=>{inEl.classList.remove(ic);inEl.style.zIndex='';animating=false;if(cb)cb();},340);
+  },330);
+}
+
+// ── FORWARD / BACK ────────────────────────────────────────
+function goForward() {
+  if (currentPage==='contents') return;
+  const idx = SEQUENCE.indexOf(currentPage);
+  if (idx<0||idx>=SEQUENCE.length-1) return;
+  navigateTo(SEQUENCE[idx+1], true);
+}
+
+function goBack() {
+  if (currentPage==='contents') return;
+  const idx = SEQUENCE.indexOf(currentPage);
+  if (idx<=0) return;
+  navigateTo(SEQUENCE[idx-1], false);
+}
+
+function navigateTo(key, forward, skipHash) {
+  if (key===currentPage||animating) return;
+  const outEl = elFor(currentPage);
+  const inEl  = elFor(key);
+
+  transition(outEl, inEl, forward, ()=>{
+    if (key.startsWith('passage-')) {
+      const n = parseInt(key.split('-')[1]);
+      renderPassage(n);
+      saveProgress(key);
+    }
+    currentPage = key;
+    if (!skipHash) updateHash(key);
+    announcePageChange(key);
+    if (key.startsWith('passage-')) setTimeout(trimToFit, 120);
+  });
+}
+
+// ── URL HASH ROUTING ──────────────────────────────────────
+function keyToHash(key) {
+  if (key === 'cover') return '';
+  if (key === 'frontmatter') return '#/how-to-read';
+  if (key === 'contents') return '#/contents';
+  if (key === 'closing') return '#/closing';
+  if (key === 'about') return '#/about';
+  if (key.startsWith('ch-')) return '#/chapter/' + key.slice(3);
+  if (key.startsWith('passage-')) return '#/passage/' + key.slice(8);
+  return '';
+}
+function hashToKey(hash) {
+  hash = (hash || '').replace(/^#\/?/, '');
+  if (!hash) return 'cover';
+  if (hash === 'how-to-read') return 'frontmatter';
+  if (hash === 'contents') return 'contents';
+  if (hash === 'closing') return 'closing';
+  if (hash === 'about') return 'about';
+  const dm = hash.match(/^practice\/(\d+)$/);
+  if (dm) { const n=parseInt(dm[1]); if(n>=1&&n<=60) return 'passage-'+n; }
+  const cm = hash.match(/^chapter\/(\d+)$/);
+  if (cm) { const n=parseInt(cm[1]); if(n>=1&&n<=6) return 'ch-'+n; }
+  return 'cover';
+}
+let suppressHashChange = false;
+function updateHash(key) {
+  const h = keyToHash(key);
+  suppressHashChange = true;
+  if (h) location.hash = h;
+  else history.replaceState(null,'',location.pathname+location.search);
+  setTimeout(()=>{suppressHashChange=false;},50);
+}
+window.addEventListener('hashchange', () => {
+  if (suppressHashChange) return;
+  const key = hashToKey(location.hash);
+  if (key !== currentPage) {
+    const forward = SEQUENCE.indexOf(key) >= SEQUENCE.indexOf(currentPage);
+    navigateTo(key, forward, true);
+  }
+});
+
+// ── PROGRESS PERSISTENCE (localStorage) ───────────────────
+function saveProgress(key) {
+  try { localStorage.setItem('potf_current', key); } catch(e){}
+  try { sessionStorage.setItem('potf_current', key); } catch(e){}
+}
+function loadProgress() {
+  try { return localStorage.getItem('potf_current') || sessionStorage.getItem('potf_current'); }
+  catch(e){ return null; }
+}
+
+// ── ACCESSIBILITY: announce page changes ──────────────────
+function announcePageChange(key) {
+  const live = document.getElementById('sr-live');
+  if (!live) return;
+  let msg = '';
+  if (key.startsWith('passage-')) {
+    const n = parseInt(key.split('-')[1]);
+    const d = PASSAGES[n-1];
+    msg = `Passage ${n} of 60. ${d.title}.`;
+  } else if (key.startsWith('ch-')) {
+    const c = CHAPTERS[parseInt(key.slice(3))-1];
+    msg = `Chapter ${c.label}. ${c.name}.`;
+  } else if (key==='cover') msg='Cover. Portals of Now.';
+  else if (key==='frontmatter') msg='How to Read This Book.';
+  else if (key==='contents') msg='Table of Contents.';
+  else if (key==='closing') msg='The end. The room was never locked.';
+  else if (key==='about') msg='About the Text.';
+  live.textContent = msg;
+}
+
+function showCover() {
+  navigateTo('cover', false);
+}
+
+function openContents() {
+  if (currentPage==='contents') return;
+  const prevPage = currentPage;
+  contentsReturnTo = prevPage;
+  const outEl = elFor(currentPage);
+  const forward = (currentPage==='cover'||currentPage==='frontmatter');
+  transition(outEl, contentsEl, forward, ()=>{
+    currentPage='contents';
+    updateHash('contents');
+    announcePageChange('contents');
+    if (prevPage.startsWith('passage-')) {
+      const n=parseInt(prevPage.split('-')[1]);
+      const el=contentsEl.querySelector(`[data-num="${n}"]`);
+      if(el)el.scrollIntoView({block:'nearest'});
+    }
+  });
+}
+let contentsReturnTo = 'cover';
+
+let aboutReturnTo = 'closing';
+function openAbout() {
+  if (currentPage==='about') return;
+  aboutReturnTo = currentPage;
+  const outEl = elFor(currentPage);
+  transition(outEl, aboutEl, true, ()=>{
+    currentPage='about';
+    updateHash('about');
+    announcePageChange('about');
+  });
+}
+function closeAbout() {
+  const target = (aboutReturnTo && aboutReturnTo!=='about') ? aboutReturnTo : 'closing';
+  navigateTo(target, false);
+}
+
+// ── BUILD CONTENTS ────────────────────────────────────────
+function buildContents() {
+  const scroll=document.getElementById('contents-scroll');
+  let lastCh=null,lastDiv=null;
+  PASSAGES.forEach(d=>{
+    const ch=CHAPTERS.find(c=>d.num>=c.start&&d.num<=c.end)||CHAPTERS[0];
+    if(ch!==lastCh){
+      const section=document.createElement('div');
+      section.className='contents-chapter';
+      const h=document.createElement('div');
+      h.className='ch-heading';
+      h.textContent=ch.label+' · '+ch.name;
+      h.onclick=()=>navigateTo('ch-'+(CHAPTERS.indexOf(ch)+1), true);
+      section.appendChild(h);
+      scroll.appendChild(section);
+      lastDiv=section;lastCh=ch;
+    }
+    const entry=document.createElement('div');
+    entry.className='contents-entry';entry.dataset.num=d.num;
+    entry.innerHTML=`<span class="ce-num">${d.num}</span><span class="ce-title">${d.title}</span>`;
+    entry.onclick=()=>{
+      const prevN = currentPage.startsWith('passage-') ? parseInt(currentPage.split('-')[1]) : 0;
+      const fwd = d.num >= prevN;
+      navigateTo('passage-'+d.num, fwd);
+    };
+    lastDiv.appendChild(entry);
+  });
+}
+
+// ── KEYBOARD ──────────────────────────────────────────────
+document.addEventListener('keydown',e=>{
+  // Ignore keys when typing in the search box
+  if (e.target && (e.target.tagName==='INPUT'||e.target.tagName==='TEXTAREA')) {
+    if (e.key==='Escape') e.target.blur();
+    return;
+  }
+  if(currentPage==='contents'){
+    if(e.key==='Escape'){
+      if(contentsReturnTo && contentsReturnTo.startsWith('passage-')) navigateTo(contentsReturnTo,false);
+      else if(contentsReturnTo) navigateTo(contentsReturnTo,false);
+      else showCover();
+    }
+    return;
+  }
+  if(e.key==='ArrowRight'||e.key==='ArrowDown')goForward();
+  if(e.key==='ArrowLeft'||e.key==='ArrowUp')goBack();
+  if(e.key==='Escape')openContents();
+});
+
+// ── SWIPE ─────────────────────────────────────────────────
+let tx=0,ty=0;
+document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY},{passive:true});
+document.addEventListener('touchend',e=>{
+  if(currentPage==='contents')return;
+  const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;
+  if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>40){
+    const hint=document.getElementById('touch-hint');
+    if(hint)hint.style.display='none';
+    if(dx<0)goForward();else goBack();
+  }
+},{passive:true});
+
+// ── SETTINGS: theme, font size, contrast ──────────────────
+const SETTINGS_KEY = 'potf_settings';
+let settings = { theme:'day', fontScale:1, highContrast:false, sound:false };
+
+function loadSettings() {
+  try {
+    const s = JSON.parse(localStorage.getItem(SETTINGS_KEY));
+    if (s) settings = Object.assign(settings, s);
+  } catch(e){}
+}
+function persistSettings() {
+  try { localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings)); } catch(e){}
+}
+function applyStoredSettings() {
+  loadSettings();
+  // Respect OS dark preference on first visit if no explicit choice
+  if (!localStorage.getItem(SETTINGS_KEY) && window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    settings.theme = 'night';
+  }
+  applyTheme(settings.theme);
+  applyFontScale(settings.fontScale);
+  applyContrast(settings.highContrast);
+}
+function applyTheme(theme) {
+  settings.theme = theme;
+  if (theme==='night') document.documentElement.setAttribute('data-theme','night');
+  else document.documentElement.removeAttribute('data-theme');
+  const tc = document.querySelector('meta[name=theme-color]');
+  if (tc) tc.content = theme==='night' ? '#141a16' : '#1E2E1A';
+  syncSettingsUI();
+}
+function toggleTheme() {
+  applyTheme(settings.theme==='night'?'day':'night');
+  persistSettings();
+}
+function applyFontScale(scale) {
+  settings.fontScale = scale;
+  document.documentElement.style.setProperty('--font-scale', scale);
+  syncSettingsUI();
+}
+function applyContrast(on) {
+  settings.highContrast = on;
+  if (on) document.documentElement.setAttribute('data-contrast','high');
+  else document.documentElement.removeAttribute('data-contrast');
+  syncSettingsUI();
+}
+function syncSettingsUI() {
+  const t = document.getElementById('set-theme');
+  if (t) t.textContent = settings.theme==='night' ? 'Night' : 'Day';
+  const c = document.getElementById('set-contrast');
+  if (c) c.textContent = settings.highContrast ? 'On' : 'Off';
+  const f = document.getElementById('set-fontsize');
+  if (f) f.textContent = Math.round(settings.fontScale*100)+'%';
+  const s = document.getElementById('set-sound');
+  if (s) s.textContent = settings.sound ? 'On' : 'Off';
+  document.querySelectorAll('.theme-icon-day').forEach(e=>e.style.display=settings.theme==='night'?'none':'block');
+  document.querySelectorAll('.theme-icon-night').forEach(e=>e.style.display=settings.theme==='night'?'block':'none');
+}
+function toggleSound() {
+  settings.sound = !settings.sound;
+  if (settings.sound) { ensureAudio(); playPageSound(); }
+  persistSettings();
+  syncSettingsUI();
+}
+function changeFontSize(delta) {
+  let s = Math.round((settings.fontScale + delta)*100)/100;
+  s = Math.max(0.85, Math.min(1.3, s));
+  applyFontScale(s);
+  persistSettings();
+  if (currentPage.startsWith('passage-')) {
+    const n = parseInt(currentPage.split('-')[1]);
+    renderPassage(n);
+    setTimeout(trimToFit, 60);
+  }
+}
+function toggleContrast() {
+  applyContrast(!settings.highContrast);
+  persistSettings();
+}
+
+function openSettings() {
+  document.getElementById('settings-panel').classList.add('open');
+  document.getElementById('scrim').classList.add('open');
+}
+function closeSettings() {
+  document.getElementById('settings-panel').classList.remove('open');
+  document.getElementById('scrim').classList.remove('open');
+}
+
+// ── BOOKMARKS ─────────────────────────────────────────────
+const BOOKMARKS_KEY = 'potf_bookmarks';
+let bookmarks = [];
+function loadBookmarks() {
+  try { bookmarks = JSON.parse(localStorage.getItem(BOOKMARKS_KEY)) || []; }
+  catch(e){ bookmarks = []; }
+}
+function saveBookmarks() {
+  try { localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(bookmarks)); } catch(e){}
+}
+function isBookmarked(n) { return bookmarks.includes(n); }
+function toggleBookmark(n) {
+  if (isBookmarked(n)) bookmarks = bookmarks.filter(x=>x!==n);
+  else bookmarks = [...bookmarks, n].sort((a,b)=>a-b);
+  saveBookmarks();
+  updateBookmarkButton(n);
+  updateContentsBookmarks();
+}
+function updateBookmarkButton(n) {
+  const btn = document.getElementById('bookmark-btn');
+  if (!btn) return;
+  btn.classList.toggle('marked', isBookmarked(n));
+  btn.setAttribute('aria-label', isBookmarked(n) ? 'Remove bookmark' : 'Add bookmark');
+}
+function updateContentsBookmarks() {
+  document.querySelectorAll('.contents-entry').forEach(el=>{
+    const n = parseInt(el.dataset.num);
+    el.classList.toggle('bookmarked', isBookmarked(n));
+  });
+}
+
+// ── SEARCH ────────────────────────────────────────────────
+let searchIndex = [];
+function buildSearch() {
+  searchIndex = PASSAGES.map(d => ({
+    num: d.num,
+    title: d.title,
+    text: (d.title + ' ' + d.paragraphs.join(' ') + ' ' + d.closing).toLowerCase()
+  }));
+}
+function runSearch(q) {
+  q = q.trim().toLowerCase();
+  const results = document.getElementById('search-results');
+  if (!results) return;
+  if (!q) { results.innerHTML = ''; return; }
+  const terms = q.split(/\s+/);
+  const matches = searchIndex.map(item => {
+    let score = 0;
+    terms.forEach(t => {
+      if (item.title.toLowerCase().includes(t)) score += 10;
+      const idx = item.text.indexOf(t);
+      if (idx >= 0) score += 1;
+    });
+    return {item, score};
+  }).filter(m => m.score>0).sort((a,b)=>b.score-a.score).slice(0,20);
+
+  if (!matches.length) {
+    results.innerHTML = '<div class="search-empty">No doorways found for that.</div>';
+    return;
+  }
+  results.innerHTML = '';
+  matches.forEach(({item}) => {
+    const ch = CHAPTERS.find(c=>item.num>=c.start&&item.num<=c.end);
+    const row = document.createElement('div');
+    row.className = 'search-result';
+    row.innerHTML = `<span class="sr-num">${item.num}</span><span class="sr-title">${item.title}</span><span class="sr-ch">${ch?ch.label:''}</span>`;
+    row.onclick = () => { closeSearch(); navigateTo('passage-'+item.num, true); };
+    results.appendChild(row);
+  });
+}
+function openSearch() {
+  document.getElementById('search-panel').classList.add('open');
+  document.getElementById('scrim').classList.add('open');
+  setTimeout(()=>{ const i=document.getElementById('search-input'); if(i)i.focus(); }, 200);
+}
+function closeSearch() {
+  document.getElementById('search-panel').classList.remove('open');
+  document.getElementById('scrim').classList.remove('open');
+  const i=document.getElementById('search-input'); if(i){i.value=''; runSearch('');}
+}
+
+function closeAllOverlays() {
+  closeSettings();
+  closeSearch();
+}
+
+// ── PRACTICE MODE ─────────────────────────────────────────
+let practiceTimer = null;
+let practiceRemaining = 0;
+let practiceDuration = 300; // default 5 min
+function openPractice(n) {
+  n = n || currentPassageNum;
+  const d = PASSAGES[n-1];
+  document.getElementById('practice-title').textContent = d.title;
+  document.getElementById('practice-closing').textContent = d.closing;
+  const pm = document.getElementById('practice-mode');
+  pm.classList.add('open');
+  pm.dataset.num = n;
+  document.body.style.overflow = 'hidden';
+  resetPracticeTimer();
+}
+function closePractice() {
+  stopPracticeTimer();
+  document.getElementById('practice-mode').classList.remove('open');
+}
+function setPracticeDuration(secs) {
+  practiceDuration = secs;
+  document.querySelectorAll('.practice-dur').forEach(b=>{
+    b.classList.toggle('active', parseInt(b.dataset.secs)===secs);
+  });
+  resetPracticeTimer();
+}
+function resetPracticeTimer() {
+  stopPracticeTimer();
+  practiceRemaining = practiceDuration;
+  updatePracticeDisplay();
+}
+function startPracticeTimer() {
+  if (practiceTimer) { pausePracticeTimer(); return; }
+  ensureAudio();
+  playBell();
+  document.getElementById('practice-start').textContent = 'Pause';
+  practiceTimer = setInterval(()=>{
+    practiceRemaining--;
+    updatePracticeDisplay();
+    if (practiceRemaining<=0) {
+      stopPracticeTimer();
+      playBell();
+      document.getElementById('practice-start').textContent = 'Begin again';
+      resetPracticeTimer();
+    }
+  }, 1000);
+}
+function pausePracticeTimer() {
+  clearInterval(practiceTimer); practiceTimer=null;
+  document.getElementById('practice-start').textContent = 'Resume';
+}
+function stopPracticeTimer() {
+  clearInterval(practiceTimer); practiceTimer=null;
+  const b=document.getElementById('practice-start'); if(b)b.textContent='Begin';
+}
+function updatePracticeDisplay() {
+  const m = Math.floor(practiceRemaining/60);
+  const s = practiceRemaining%60;
+  const el = document.getElementById('practice-clock');
+  if (el) el.textContent = m+':'+String(s).padStart(2,'0');
+}
+
+// ── INIT ──────────────────────────────────────────────────
+function init() {
+  loadBookmarks();
+  applyStoredSettings();
+  buildChapterPages();
+  buildContents();
+  buildSearch();
+  updateContentsBookmarks();
+  wireControls();
+
+  // Priority 1: deep link in URL hash
+  const hashKey = hashToKey(location.hash);
+  if (location.hash && hashKey !== 'cover') {
+    currentPage = hashKey;
+    showPageDirect(hashKey);
+    return;
+  }
+
+  // Priority 2: saved reading position (returning reader)
+  const saved = loadProgress();
+  if (saved && saved.startsWith('passage-')) {
+    const n = parseInt(saved.split('-')[1]);
+    if (n>=1 && n<=112) showContinueAffordance(saved);
+  }
+  coverEl.style.display='flex';
+}
+
+function wireControls() {
+  const scrim = document.getElementById('scrim');
+  if (scrim) scrim.onclick = closeAllOverlays;
+  const si = document.getElementById('search-input');
+  if (si) si.addEventListener('input', e => runSearch(e.target.value));
+  const cont = document.getElementById('continue-reading');
+  if (cont) cont.onclick = () => { cont.style.display='none'; navigateTo(cont.dataset.key, true); };
+  setupDoorOfDay();
+  // Global ESC closes overlays
+  document.addEventListener('keydown', e => {
+    if (e.key==='Escape') {
+      const pm = document.getElementById('practice-mode');
+      if (pm && pm.classList.contains('open')) { e.stopPropagation(); closePractice(); return; }
+      const anyOpen = document.querySelector('.settings-panel.open, .search-panel.open');
+      if (anyOpen) { e.stopPropagation(); closeAllOverlays(); }
+    }
+  }, true);
+}
+
+// ── DOOR OF THE DAY ───────────────────────────────────────
+function doorOfDayNumber() {
+  // Deterministic per calendar day — same door for everyone that day
+  const now = new Date();
+  const dayNum = Math.floor(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())/86400000);
+  return (dayNum % 60) + 1;
+}
+function setupDoorOfDay() {
+  const el = document.getElementById('door-of-day');
+  if (!el) return;
+  const n = doorOfDayNumber();
+  const d = PASSAGES[n-1];
+  el.querySelector('.dod-title').textContent = d.title;
+  el.onclick = () => navigateTo('passage-'+n, true);
+}
+
+// Show any page directly without animation (for deep links / restore)
+function showPageDirect(key) {
+  [coverEl,fmEl,contentsEl,passageEl,closingEl,aboutEl].forEach(el=>{el.style.display='none';});
+  Object.values(chapterEls).forEach(el=>{el.style.display='none';});
+  const el = elFor(key);
+  if (!el) { coverEl.style.display='flex'; currentPage='cover'; return; }
+  if (key.startsWith('passage-')) {
+    const n = parseInt(key.split('-')[1]);
+    renderPassage(n);
+    saveProgress(key);
+    requestAnimationFrame(()=>requestAnimationFrame(()=>setTimeout(trimToFit,120)));
+  }
+  el.style.display='flex';
+  el.style.zIndex='40';
+  announcePageChange(key);
+}
+
+// Cover "continue reading" affordance
+function showContinueAffordance(key) {
+  const n = parseInt(key.split('-')[1]);
+  const btn = document.getElementById('continue-reading');
+  if (btn && n>=1 && n<=112) {
+    btn.querySelector('.cont-title').textContent = PASSAGES[n-1].title;
+    btn.dataset.key = key;
+    btn.style.display = 'block';
+  }
+}
+
+// Deferred external scripts finish before DOMContentLoaded, so PASSAGES,
+// VERSES, GLYPHS and CHAPTER_ICONS are all guaranteed available here.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+
+// ── SERVICE WORKER (offline reading) ──────────────────────
+// Only register over http(s), not file:// (which throws)
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
+}
+
+</script>
+</body>
+</html>

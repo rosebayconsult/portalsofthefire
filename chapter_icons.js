@@ -1,0 +1,8 @@
+const CHAPTER_ICONS = {
+1:"<svg viewBox=\"-50 -50 100 100\" width=\"80\" height=\"80\"><path d=\"M0,-44 C4,-28 16,-8 16,12 C16,28 10,38 0,42 C-10,38 -16,28 -16,12 C-16,-8 -4,-28 0,-44 Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/></svg>",
+2:"<svg viewBox=\"-50 -50 100 100\" width=\"80\" height=\"80\"><path d=\"M-30,-30 L30,-30 L30,30 L-30,30 Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-linejoin=\"round\"/><path d=\"M0,-44 C0,-30 0,-10 0,10\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+3:"<svg viewBox=\"-50 -50 100 100\" width=\"80\" height=\"80\"><path d=\"M0,-44 C4,-30 12,-10 12,8 C12,22 6,32 0,32 C-6,32 -12,22 -12,8 C-12,-10 -4,-30 0,-44 Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\"/><line x1=\"-20\" y1=\"32\" x2=\"20\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+4:"<svg viewBox=\"-50 -50 100 100\" width=\"80\" height=\"80\"><circle cx=\"0\" cy=\"0\" r=\"40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"5\" stroke-dasharray=\"8,5\"/><path d=\"M0,-22 C0,-14 0,14 0,22\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\"/></svg>",
+5:"<svg viewBox=\"-50 -50 100 100\" width=\"80\" height=\"80\"><circle cx=\"-16\" cy=\"0\" r=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/><circle cx=\"16\" cy=\"0\" r=\"14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\"/></svg>",
+6:"<svg viewBox=\"-50 -50 100 100\" width=\"80\" height=\"80\"><path d=\"M0,-44 C4,-30 12,-10 12,8 C12,22 6,32 0,32 C-6,32 -12,22 -12,8 C-12,-10 -4,-30 0,-44 Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"6\"/></svg>",
+};
